@@ -112,7 +112,7 @@ jobs:
           $exe = Get-ChildItem unpacked -Recurse -Filter zelda3.exe | Select-Object -First 1
           $output = & $exe.FullName --version
           if ($LASTEXITCODE -ne 0) { throw 'Windows executable failed to load.' }
-          if ($output -notmatch 'Zelda ALttP') { throw 'Unexpected version output.' }
+          if (($output -join "`n") -notmatch 'Zelda ALttP') { throw 'Unexpected version output.' }
           $output
   draft-releases:
     if: github.event_name == 'push' || inputs.create_drafts
