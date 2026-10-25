@@ -1,0 +1,21 @@
+{
+  "name": "Zelda ALttP — macOS & Windows",
+  "project_lead": "Hiran Tiago Lins Borba",
+  "github": "https://github.com/htiagolborba",
+  "location": "Toronto, ON, CA",
+  "copyright_year": 2026,
+  "contribution_scope": [
+    "macOS build preparation",
+    "local asset extraction workflow",
+    "application packaging",
+    "application icon integration",
+    "project documentation",
+    "planned diorama visual direction",
+    "Windows x86_64 cross-build",
+    "ROM-free platform release packaging",
+    "GitHub Actions draft release workflow"
+  ],
+  "upstream": "https://github.com/snesrev/zelda3",
+  "credits_file": "CREDITS.md",
+  "development_assistance": "OpenAI Codex"
+}

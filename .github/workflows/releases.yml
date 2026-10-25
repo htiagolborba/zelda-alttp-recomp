@@ -1,0 +1,141 @@
+name: Platform releases
+on:
+  push:
+    branches: [main]
+    paths:
+      - "zelda3/src/**"
+      - "zelda3/snes/**"
+      - "zelda3/third_party/**"
+      - "scripts/**"
+      - "packaging/**"
+      - ".github/workflows/releases.yml"
+      - "VERSION"
+      - "requirements-build.txt"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version (for example 0.1.0)
+        required: true
+        default: '0.1.0'
+      create_drafts:
+        description: Create two draft GitHub releases after validation
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos
+            os: macos-15-intel
+          - platform: windows
+            os: ubuntu-24.04
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      RELEASE_VERSION: ${{ inputs.version || '0.1.0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate version
+        shell: bash
+        run: |
+          python -c 'import os,re; assert re.fullmatch(r"\d+\.\d+\.\d+", os.environ["RELEASE_VERSION"]), "Expected MAJOR.MINOR.PATCH"'
+          test "$RELEASE_VERSION" = "$(cat VERSION)"
+      - name: Install packaging dependencies
+        run: python -m pip install -r requirements-build.txt
+      - name: Build SDL2 and game on macOS
+        if: matrix.platform == 'macos'
+        shell: bash
+        run: |
+          curl -fL https://www.libsdl.org/release/SDL2-2.32.10.tar.gz -o /tmp/SDL2.tar.gz
+          echo '5f5993c530f084535c65a6879e9b26ad441169b3e25d789d83287040a9ca5165  /tmp/SDL2.tar.gz' | shasum -a 256 -c -
+          mkdir -p .tools/src .tools/sdl2-build
+          tar -xzf /tmp/SDL2.tar.gz -C .tools/src
+          cd .tools/sdl2-build
+          ../src/SDL2-2.32.10/configure --prefix="$GITHUB_WORKSPACE/.tools/sdl2" --disable-shared --enable-static
+          make -j4
+          make install
+          cd "$GITHUB_WORKSPACE/zelda3"
+          export PATH="$GITHUB_WORKSPACE/.tools/sdl2/bin:$PATH"
+          make -j4 zelda3 CC=clang SDLFLAGS="$(sdl2-config --static-libs) -lm"
+          ./zelda3 --version
+          otool -L zelda3
+      - name: Cross-build Windows executable
+        if: matrix.platform == 'windows'
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-mingw-w64-x86-64 binutils-mingw-w64-x86-64
+          curl -fL https://www.libsdl.org/release/SDL2-devel-2.32.10-mingw.tar.gz -o /tmp/SDL2-windows.tar.gz
+          echo '83a5d74012311edc3c0d40ea6faecbe57ad692aa033fa5dc273cc937e3938ff2  /tmp/SDL2-windows.tar.gz' | sha256sum -c -
+          mkdir -p .tools
+          tar -xzf /tmp/SDL2-windows.tar.gz -C .tools
+          export SDL2_WINDOWS_PREFIX="$GITHUB_WORKSPACE/.tools/SDL2-2.32.10/x86_64-w64-mingw32"
+          bash scripts/build-windows.sh
+          x86_64-w64-mingw32-objdump -p build/windows/zelda3.exe | grep 'DLL Name'
+      - name: Package
+        shell: bash
+        env:
+          PLATFORM: ${{ matrix.platform }}
+        run: |
+          if [ "$PLATFORM" = macos ]; then
+            license=.tools/src/SDL2-2.32.10/LICENSE.txt
+          else
+            license=.tools/SDL2-2.32.10/LICENSE.txt
+          fi
+          python scripts/package-release.py "$PLATFORM" --version "$RELEASE_VERSION" --sdl-license "$license"
+          python scripts/check-release.py dist/*.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.platform }}
+          path: dist/*
+          if-no-files-found: error
+  windows-loader-check:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-windows
+          path: packages
+      - name: Check executable and DLL loading on Windows
+        shell: pwsh
+        run: |
+          $archive = Get-ChildItem packages -Filter *.zip | Select-Object -First 1
+          Expand-Archive $archive.FullName -DestinationPath unpacked
+          $exe = Get-ChildItem unpacked -Recurse -Filter zelda3.exe | Select-Object -First 1
+          $output = & $exe.FullName --version
+          if ($LASTEXITCODE -ne 0) { throw 'Windows executable failed to load.' }
+          if ($output -notmatch 'Zelda ALttP') { throw 'Unexpected version output.' }
+          $output
+  draft-releases:
+    if: github.event_name == 'push' || inputs.create_drafts
+    needs: [build, windows-loader-check]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_VERSION: ${{ inputs.version || '0.1.0' }}
+      RELEASE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: release-*
+          merge-multiple: true
+          path: dist
+      - name: Create platform drafts
+        shell: bash
+        run: |
+          for platform in macos windows; do
+            tag="v${RELEASE_VERSION}-${platform}"
+            gh release create "$tag" "dist/Zelda-ALttP-${RELEASE_VERSION}-${platform}-x86_64.zip" "dist/Zelda-ALttP-${RELEASE_VERSION}-${platform}-x86_64.zip.sha256" --draft --target "$RELEASE_COMMIT" --title "Zelda ALttP ${RELEASE_VERSION} — ${platform} x86_64" --notes-file "docs/RELEASE-NOTES-${platform}.md"
+          done
