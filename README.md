@@ -183,6 +183,8 @@ The workflow has been prepared locally and must be validated in the target GitHu
 
 ## Visual development roadmap
 
+The proposed architecture, visual requirements, hardware profiles and milestone gates are documented in the [3D blueprint](docs/3d/BLUEPRINT.md), [architecture](docs/3d/ARCHITECTURE.md), [decisions](docs/3d/DECISIONS.md), and [implementation plan](docs/3d/IMPLEMENTATION-PLAN.md). These are draft specifications; they do not represent an implemented 3D engine.
+
 The long-term goal is to explore a handcrafted miniature aesthetic: rounded forms, stylized materials, soft lighting, and a diorama camera, while retaining the original gameplay logic.
 
 The next milestone is a **small playable visual prototype**, not an immediate replacement of all game graphics:
