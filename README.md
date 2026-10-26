@@ -1,4 +1,4 @@
-# Zelda ALttP — macOS & Windows
+# Zelda A Link to the past — macOS & Windows
 
 **A desktop adaptation project for The Legend of Zelda: A Link to the Past.**
 
