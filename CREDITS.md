@@ -33,3 +33,7 @@ condução do projeto, preservando a autoria do jogo e dos componentes usados.
 ## Experimental 3D laboratory (M0)
 
 Original procedural scene, native lifecycle probe and related tooling: Hiran Tiago Lins Borba, developed with OpenAI Codex assistance. Godot Engine is used under the MIT license; the generated native interface header retains its original copyright and license notice. No ALttP gameplay or Nintendo Switch models are integrated into this probe.
+
+## Experimental C gameplay integration (M1)
+
+Host separation, Godot binding, state/input interfaces, diagnostic presentation and verification tooling: Hiran Tiago Lins Borba, with OpenAI Codex assistance. Gameplay code remains the snesrev/zelda3 reimplementation; no authorship of the original Nintendo game or upstream reverse engineering is claimed.

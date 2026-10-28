@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "alttp_probe_init"
+compatibility_minimum = "4.7.2"
+reloadable = false
+
+[libraries]
+macos.x86_64 = "res://native/bin/libalttp_core_godot.macos.x86_64.dylib"
+windows.x86_64 = "res://native/bin/alttp_core_godot.windows.x86_64.dll"

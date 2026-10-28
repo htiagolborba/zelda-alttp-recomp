@@ -13,9 +13,9 @@ The current version retains the original 2D presentation. A miniature diorama ar
 
 ## Latest development update — October 27, 2026
 
-I have started the experimental 3D track with a native C extension and an original procedural scene in Godot 4.7.2. The first macOS lifecycle and renderer checks passed. This is a static infrastructure prototype; ALttP gameplay is not connected yet.
+I have connected the existing C gameplay implementation to Godot through an experimental native host. Controlled local tests matched the original host across 3,750 ticks, and the Godot bridge matched the standalone C state after 240 ticks. The 3D environment is still illustrative: converted maps, audio output and persistent preview saves are not implemented.
 
-Read [the full M0 development update](docs/updates/2026-10-27-m0.md), follow [the changelog](CHANGELOG.md), or see [how project updates are maintained](docs/UPDATING-GITHUB.md).
+Read [the M1 C integration update](docs/updates/2026-10-27-m1-core.md) or [the earlier M0 update](docs/updates/2026-10-27-m0.md), follow [the changelog](CHANGELOG.md), or see [how project updates are maintained](docs/UPDATING-GITHUB.md).
 
 ## Project status
 
@@ -24,9 +24,9 @@ Read [the full M0 development update](docs/updates/2026-10-27-m0.md), follow [th
 | macOS Intel build | Compiled locally with Apple Clang; application bundle prepared |
 | Windows x86_64 build | Cross-compiled locally with LLVM-MinGW; native Windows gameplay testing pending |
 | Gamepad input | Implemented upstream through SDL2; physical-device testing pending |
-| Public GitHub releases | Automation prepared; publication pending repository setup and CI validation |
+| Public GitHub releases | Stable platform workflow validated; see Releases for current publication status |
 | Visual overhaul | Original graphics retained in the stable game; experimental static M0 laboratory implemented separately |
-| 3D laboratory | macOS native lifecycle and Compatibility renderer verified locally; Windows/Forward+ checks pending |
+| 3D laboratory | Initial C gameplay bridge, snapshots and reference view verified on macOS; native Windows/Forward+ checks pending |
 | Apple Silicon native build | Not included in the current release targets |
 
 Compilation and executable checks do not establish full gameplay compatibility. Audio, saves, room transitions, and physical controllers still need platform testing.
@@ -188,19 +188,27 @@ The packager copies an explicit set of files into a fresh staging directory and 
 
 The stable platform build and Windows executable-loader workflow passed in GitHub Actions during the initial desktop adaptation. Draft creation requires repository write access. Build-related pushes to `main` start that pipeline; existing versioned releases are preserved. The separate experimental 3D workflow still needs its own remote validation. No ROM secret or ROM upload is needed in CI.
 
+## Experimental C integration (M1)
+
+![Actual C/Godot integration viewport](docs/3d/images/m1-core-integration.png)
+
+*Actual macOS capture during the game intro. The right panel is produced by the same C simulation. The 3D blockout is not a converted map; audio is muted and disk save writes are disabled.*
+
+See [build/run instructions](docs/3d/CORE-INTEGRATION.md), [verification and limits](docs/3d/M1-RESULTS.md), and [milestone notes](docs/updates/2026-10-27-m1-core.md). This is an experimental developer preview, not a new playable 3D release. The historical M0 screenshot below remains the pre-integration baseline.
+
 ## Experimental 3D laboratory (M0)
 
 ![Actual M0 viewport capture: procedural 3D laboratory running on macOS](docs/3d/images/m0-laboratory.png)
 
 *Actual engine capture. Static technical prototype with a stationary marker; no ALttP gameplay or ROM resources are connected.*
 
-A ROM-free Godot 4.7.2 laboratory now verifies native-library loading and displays an original procedural scene. The macOS lifecycle and Compatibility renderer have been tested locally. Windows native loading and Forward+ rendering still require validation. The ALttP gameplay core is not connected yet.
+A ROM-free Godot 4.7.2 laboratory now verifies native-library loading and displays an original procedural scene. The macOS lifecycle and Compatibility renderer have been tested locally. Windows native loading and Forward+ rendering still require validation. The original M0 scene does not connect gameplay; optional M1 integration is now available above.
 
 See [setup and commands](docs/3d/GETTING-STARTED.md), [verified M0 results](docs/3d/M0-RESULTS.md), and the [actual viewport capture](docs/3d/images/m0-laboratory.png). This experimental project is separate from the stable 2D game releases.
 
 ## Visual development roadmap
 
-The proposed architecture, visual requirements, hardware profiles and milestone gates are documented in the [3D blueprint](docs/3d/BLUEPRINT.md), [architecture](docs/3d/ARCHITECTURE.md), [decisions](docs/3d/DECISIONS.md), and [implementation plan](docs/3d/IMPLEMENTATION-PLAN.md). These are draft specifications; they do not represent an implemented 3D engine.
+The proposed architecture, visual requirements, hardware profiles and milestone gates are documented in the [3D blueprint](docs/3d/BLUEPRINT.md), [architecture](docs/3d/ARCHITECTURE.md), [decisions](docs/3d/DECISIONS.md), and [implementation plan](docs/3d/IMPLEMENTATION-PLAN.md). These documents describe the target architecture; only the M0/M1 capabilities explicitly reported above have been implemented.
 
 The long-term goal is to explore a handcrafted miniature aesthetic: rounded forms, stylized materials, soft lighting, and a diorama camera, while retaining the original gameplay logic.
 

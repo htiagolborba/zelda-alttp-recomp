@@ -1,6 +1,9 @@
 /* Copyright (c) 2026 Hiran Tiago Lins Borba. MIT; see root LICENSE.
- * M0 lifecycle probe only. Does not link or step the ALttP gameplay core. */
+ * Base M0 probe; ALTTP_WITH_CORE_HOST additionally registers the M1 C bridge. */
 #include "gdextension_interface.h"
+#ifdef ALTTP_WITH_CORE_HOST
+#include "godot_bridge.h"
+#endif
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -22,6 +25,9 @@ static void probe_initialize(void *userdata, GDExtensionInitializationLevel leve
   (void)userdata;
   if (level != GDEXTENSION_INITIALIZATION_SCENE) return;
   initialized = 1;
+#ifdef ALTTP_WITH_CORE_HOST
+  alttp_godot_register();
+#endif
   printf("ALTTP_NATIVE_READY abi=%u godot=%u.%u.%u\n", ALTTP_PROBE_ABI,
          engine_version.major, engine_version.minor, engine_version.patch);
   fflush(stdout);
@@ -31,6 +37,9 @@ static void probe_deinitialize(void *userdata, GDExtensionInitializationLevel le
   (void)userdata;
   if (level != GDEXTENSION_INITIALIZATION_SCENE) return;
   initialized = 0;
+#ifdef ALTTP_WITH_CORE_HOST
+  alttp_godot_unregister();
+#endif
   puts("ALTTP_NATIVE_STOPPED");
   fflush(stdout);
 }
@@ -50,6 +59,9 @@ ALTTP_EXPORT GDExtensionBool alttp_probe_init(
     fputs("ALTTP_NATIVE_ERROR: this probe is pinned to Godot 4.7.2\n", stderr);
     return 0;
   }
+#ifdef ALTTP_WITH_CORE_HOST
+  if (!alttp_godot_prepare(get_proc, library)) return 0;
+#endif
   initialization->minimum_initialization_level = GDEXTENSION_INITIALIZATION_SCENE;
   initialization->userdata = NULL;
   initialization->initialize = probe_initialize;

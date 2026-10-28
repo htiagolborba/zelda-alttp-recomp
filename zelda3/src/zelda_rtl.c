@@ -879,6 +879,11 @@ void ZeldaReadSram() {
 }
 
 void ZeldaWriteSram() {
+#ifdef ALTTP_CORE_HOST
+  extern void alttp_core_sram_write_requested(void);
+  alttp_core_sram_write_requested();
+  return;
+#else
   rename("saves/sram.dat", "saves/sram.bak");
   FILE *f = fopen("saves/sram.dat", "wb");
   if (f) {
@@ -887,4 +892,12 @@ void ZeldaWriteSram() {
   } else {
     fprintf(stderr, "Unable to write saves/sram.dat\n");
   }
+#endif
 }
+#ifdef ALTTP_CORE_HOST
+void ZeldaCoreHostReleaseRecorder(void) {
+  ByteArray_Destroy(&state_recorder.log);
+  ByteArray_Destroy(&state_recorder.base_snapshot);
+  memset(&state_recorder, 0, sizeof(state_recorder));
+}
+#endif

@@ -3,13 +3,21 @@ on:
   push:
     branches: [main]
     paths:
-      - 'native/godot_probe/**'
+      - 'native/**'
+      - 'zelda3/src/**'
+      - 'zelda3/snes/**'
+      - 'scripts/*core*.py'
+      - 'tests/core_host/**'
       - 'presentation/godot/**'
       - 'scripts/*godot*.py'
       - '.github/workflows/3d-probe.yml'
   pull_request:
     paths:
-      - 'native/godot_probe/**'
+      - 'native/**'
+      - 'zelda3/src/**'
+      - 'zelda3/snes/**'
+      - 'scripts/*core*.py'
+      - 'tests/core_host/**'
       - 'presentation/godot/**'
       - 'scripts/*godot*.py'
       - '.github/workflows/3d-probe.yml'
@@ -41,11 +49,21 @@ jobs:
         run: python scripts/setup-godot.py
       - name: Compile native lifecycle probe
         run: python scripts/build-godot-probe.py
+      - name: Compile SDL-free gameplay bridge
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = Windows ]; then
+            python scripts/build-core-host.py --target windows --cc clang --godot
+          else
+            python scripts/build-core-host.py --godot
+          fi
       - name: Load, initialize, and stop in the actual engine
         env:
           GODOT_BINARY: ${{ matrix.engine }}
         shell: bash
-        run: python scripts/test-godot-probe.py --godot "$GODOT_BINARY"
+        run: |
+          python scripts/test-godot-probe.py --godot "$GODOT_BINARY"
+          python scripts/test-godot-probe.py --core-api --godot "$GODOT_BINARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

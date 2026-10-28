@@ -1,5 +1,7 @@
 # Run the M0 3D laboratory
 
+For the optional live C integration, see [CORE-INTEGRATION.md](CORE-INTEGRATION.md). The no-ROM M0 mode described here remains available.
+
 Owner: Hiran Tiago Lins Borba. Status: an executable lifecycle/renderer probe,
 not a playable 3D port. No ROM is loaded by this prototype.
 

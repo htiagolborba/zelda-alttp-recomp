@@ -7,6 +7,17 @@ milestone is not automatically a new downloadable game release.
 
 ## Unreleased — experimental 3D laboratory
 
+### 2026-10-27 — M1: initial C gameplay bridge
+
+- Added an SDL-free C gameplay host, copied snapshots, Godot commands, native input mapping and a live reference panel from the same simulation.
+- Preserved PPU/HDMA and scheduled muted audio synthesis; added optional read-only SRAM import and suppressed preview disk saves.
+- Matched all 3,750 controlled ticks against the reference host (cold start and imported SRAM), matched Godot/standalone state after 240 ticks, and completed a 2,000-tick AddressSanitizer route.
+- Cross-compiled the Windows gameplay DLL; native Windows execution remains pending.
+- Added local verification scripts, no-ROM API-boundary CI tests, an actual capture, and [full M1 notes](docs/updates/2026-10-27-m1-core.md).
+- Still pending: audible PCM output, persistent experimental saves, collision-aligned 3D areas, broader fixtures, physical-controller tests and Blender/GLB validation.
+
+The following M0 entry records the earlier static baseline; its limitations describe that milestone at the time.
+
 ### 2026-10-27 — M0: first executable implementation
 
 **Status:** M0 partially implemented; native lifecycle and rendering verified on

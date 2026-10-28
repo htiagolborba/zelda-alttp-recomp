@@ -3,7 +3,7 @@
 **Project:** Zelda ALttP — macOS & Windows
 **Project lead:** Hiran Tiago Lins Borba · Toronto, ON, Canada
 **Status:** Draft specification, revision 0.1 — 2026-10-25
-**Scope:** Design specification. A minimal M0 native lifecycle probe and procedural scene now exist; the gameplay bridge and modeled game world remain unimplemented. See [M0 results](M0-RESULTS.md).
+**Scope:** Design specification. A minimal M0 native lifecycle probe and procedural scene now exist; an initial gameplay bridge is now implemented and tested locally, while the modeled game world remains unimplemented. See [M1 results](M1-RESULTS.md). See [M0 results](M0-RESULTS.md).
 
 ## 1. Product direction
 
@@ -50,7 +50,7 @@ but it must be labeled as an art prototype rather than a playable remake.
 | Content tooling | Python | Local extracted-data inspection, conversion, schema validation |
 | Delivery | Existing GitHub Actions plus native-extension/export jobs | Separate experimental 3D packages and reference 2D releases |
 
-Godot is a **proposed choice**, not an installed dependency or final commitment.
+Godot 4.7.2 is now installed and tested for the M0/M1 prototype on macOS. The current bridge uses the C GDExtension interface directly; the proposed C++ wrapper is not installed. Cross-platform validation remains open.
 GDExtension loads native libraries; it does not automatically make the existing
 SDL executable an embeddable library. See [the architecture](ARCHITECTURE.md)
 and [the engine decision](DECISIONS.md).

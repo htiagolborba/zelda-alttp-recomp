@@ -37,3 +37,9 @@ an unrelated development update.
 - [M0 setup](3d/GETTING-STARTED.md)
 - [M0 verification report](3d/M0-RESULTS.md)
 - [Changelog](../CHANGELOG.md)
+
+## Latest recorded integration milestone
+
+- [M1 C gameplay integration — October 27, 2026](updates/2026-10-27-m1-core.md)
+- [M1 setup/API](3d/CORE-INTEGRATION.md)
+- [M1 verification](3d/M1-RESULTS.md)

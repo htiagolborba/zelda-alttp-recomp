@@ -1,6 +1,6 @@
 # Proposed architecture and bridge contract
 
-Status: design, not an implemented API. Owner: Hiran Tiago Lins Borba.
+Status: target design. An initial implementation now exists; see [the actual M1 contract](CORE-INTEGRATION.md) and [verified results](M1-RESULTS.md). Queue-based audio, full semantic events and persistent experimental saves remain planned. Owner: Hiran Tiago Lins Borba.
 
 ## Runtime boundary
 

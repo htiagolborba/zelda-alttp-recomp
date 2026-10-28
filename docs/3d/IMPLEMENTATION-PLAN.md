@@ -18,6 +18,8 @@ or generate the full game's art before this gate.
 
 ## M1 — Prove the gameplay boundary
 
+Initial implementation and scoped parity tests are now recorded in [M1 results](M1-RESULTS.md). Audio output, persistent experimental saves, wider fixtures and native Windows validation remain open.
+
 - Inventory dependencies of asset loading, initialization, stepping, reference
   rendering, replay, audio and file access.
 - Extract host services incrementally while preserving the SDL executable.
