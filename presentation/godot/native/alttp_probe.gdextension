@@ -1,0 +1,9 @@
+[configuration]
+entry_symbol = "alttp_probe_init"
+compatibility_minimum = "4.7.2"
+reloadable = false
+
+[libraries]
+macos.x86_64 = "res://native/bin/libalttp_probe.macos.x86_64.dylib"
+macos.arm64 = "res://native/bin/libalttp_probe.macos.arm64.dylib"
+windows.x86_64 = "res://native/bin/alttp_probe.windows.x86_64.dll"

@@ -181,6 +181,12 @@ The packager copies an explicit set of files into a fresh staging directory and 
 
 The workflow has been prepared locally and must be validated in the target GitHub repository. Draft creation requires repository write access. Build-related pushes to `main` also start the pipeline and prepare draft releases after validation. No ROM secret or ROM upload is needed in CI.
 
+## Experimental 3D laboratory (M0)
+
+A ROM-free Godot 4.7.2 laboratory now verifies native-library loading and displays an original procedural scene. The macOS lifecycle and Compatibility renderer have been tested locally. Windows native loading and Forward+ rendering still require validation. The ALttP gameplay core is not connected yet.
+
+See [setup and commands](docs/3d/GETTING-STARTED.md), [verified M0 results](docs/3d/M0-RESULTS.md), and the [actual viewport capture](docs/3d/images/m0-laboratory.png). This experimental project is separate from the stable 2D game releases.
+
 ## Visual development roadmap
 
 The proposed architecture, visual requirements, hardware profiles and milestone gates are documented in the [3D blueprint](docs/3d/BLUEPRINT.md), [architecture](docs/3d/ARCHITECTURE.md), [decisions](docs/3d/DECISIONS.md), and [implementation plan](docs/3d/IMPLEMENTATION-PLAN.md). These are draft specifications; they do not represent an implemented 3D engine.

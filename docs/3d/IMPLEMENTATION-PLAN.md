@@ -1,6 +1,6 @@
 # First implementation backlog
 
-Status: proposed work; no items below are marked complete by creating this plan.
+Status: M0 partially implemented. See [M0 results](M0-RESULTS.md) for verified work and [setup instructions](GETTING-STARTED.md) to run the laboratory. Remaining milestones are proposed work.
 Owner: Hiran Tiago Lins Borba.
 
 ## M0 — Validate the development path

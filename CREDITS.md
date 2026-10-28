@@ -29,3 +29,7 @@ Copyright (c) 2026 Hiran Tiago Lins Borba, para as contribuições originais des
 
 Os créditos de Hiran Tiago Lins Borba se referem às contribuições desta adaptação e à
 condução do projeto, preservando a autoria do jogo e dos componentes usados.
+
+## Experimental 3D laboratory (M0)
+
+Original procedural scene, native lifecycle probe and related tooling: Hiran Tiago Lins Borba, developed with OpenAI Codex assistance. Godot Engine is used under the MIT license; the generated native interface header retains its original copyright and license notice. No ALttP gameplay or Nintendo Switch models are integrated into this probe.

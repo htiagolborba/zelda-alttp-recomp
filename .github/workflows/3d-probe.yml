@@ -1,0 +1,56 @@
+name: 3D native probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'native/godot_probe/**'
+      - 'presentation/godot/**'
+      - 'scripts/*godot*.py'
+      - '.github/workflows/3d-probe.yml'
+  pull_request:
+    paths:
+      - 'native/godot_probe/**'
+      - 'presentation/godot/**'
+      - 'scripts/*godot*.py'
+      - '.github/workflows/3d-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lifecycle:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15-intel
+            engine: .tools/godot-4.7.2/Godot.app/Contents/MacOS/Godot
+          - os: windows-latest
+            engine: .tools/godot-4.7.2/Godot_v4.7.2-stable_win64_console.exe
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: ilammy/msvc-dev-cmd@v1
+        if: runner.os == 'Windows'
+        with:
+          arch: x64
+      - name: Download and verify pinned Godot editor
+        run: python scripts/setup-godot.py
+      - name: Compile native lifecycle probe
+        run: python scripts/build-godot-probe.py
+      - name: Load, initialize, and stop in the actual engine
+        env:
+          GODOT_BINARY: ${{ matrix.engine }}
+        shell: bash
+        run: python scripts/test-godot-probe.py --godot "$GODOT_BINARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 3d-probe-${{ runner.os }}
+          path: |
+            build/3d-native/*.json
+            build/3d-native/*.log
+          if-no-files-found: warn

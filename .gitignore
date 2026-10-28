@@ -27,3 +27,9 @@ zelda3/assets/sprites/*
 !zelda3/assets/sprites/.gitkeep
 zelda3/saves/
 
+
+# Experimental 3D host
+presentation/godot/.godot/
+presentation/godot/native/bin/*
+!presentation/godot/native/bin/.gitkeep
+local-data/

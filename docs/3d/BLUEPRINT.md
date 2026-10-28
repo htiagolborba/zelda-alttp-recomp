@@ -3,7 +3,7 @@
 **Project:** Zelda ALttP — macOS & Windows
 **Project lead:** Hiran Tiago Lins Borba · Toronto, ON, Canada
 **Status:** Draft specification, revision 0.1 — 2026-10-25
-**Scope:** Planning only. No 3D runtime, engine bridge, or new models have been implemented.
+**Scope:** Design specification. A minimal M0 native lifecycle probe and procedural scene now exist; the gameplay bridge and modeled game world remain unimplemented. See [M0 results](M0-RESULTS.md).
 
 ## 1. Product direction
 

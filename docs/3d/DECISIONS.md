@@ -20,6 +20,8 @@ an audit; this is not a promise that core extraction is straightforward.
 | Custom renderer in the SDL host | Close to current C loop | Must build scene tools, animation, materials, lighting and content pipeline |
 | Nintendo Switch game's engine | Not an available project dependency | Engine/source/assets are not supplied or licensed for use here |
 
+M0 update (2026-10-27): Godot 4.7.2 is pinned for a minimal C-only lifecycle probe. The eventual C++ wrapper/bindings are not installed yet; Windows load and GPU-profile validation remain pending.
+
 Recommendation: first test Godot, because a scene/asset editor and native-library
 boundary suit the proposed slice. This is an engineering judgment, not a claim
 that other engines are incapable. Pin exact compatible Godot/godot-cpp versions

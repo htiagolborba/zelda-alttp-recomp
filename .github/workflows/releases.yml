@@ -6,7 +6,11 @@ on:
       - "zelda3/src/**"
       - "zelda3/snes/**"
       - "zelda3/third_party/**"
-      - "scripts/**"
+      - "scripts/build-windows.sh"
+      - "scripts/package-release.py"
+      - "scripts/prepare-assets.py"
+      - "scripts/check-release.py"
+      - "build-macos.sh"
       - "packaging/**"
       - ".github/workflows/releases.yml"
       - "VERSION"
@@ -137,5 +141,9 @@ jobs:
         run: |
           for platform in macos windows; do
             tag="v${RELEASE_VERSION}-${platform}"
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "Keeping existing release $tag unchanged."
+              continue
+            fi
             gh release create "$tag" "dist/Zelda-ALttP-${RELEASE_VERSION}-${platform}-x86_64.zip" "dist/Zelda-ALttP-${RELEASE_VERSION}-${platform}-x86_64.zip.sha256" --draft --target "$RELEASE_COMMIT" --title "Zelda ALttP ${RELEASE_VERSION} — ${platform} x86_64" --notes-file "docs/RELEASE-NOTES-${platform}.md"
           done
