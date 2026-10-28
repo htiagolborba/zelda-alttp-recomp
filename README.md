@@ -11,6 +11,12 @@ This project builds on [snesrev/zelda3](https://github.com/snesrev/zelda3), a re
 
 The current version retains the original 2D presentation. A miniature diorama art direction inspired by Link’s Awakening for Nintendo Switch is a **planned research and development milestone**. No 3D remake or HD texture overhaul is included in this release.
 
+## Latest development update — October 27, 2026
+
+I have started the experimental 3D track with a native C extension and an original procedural scene in Godot 4.7.2. The first macOS lifecycle and renderer checks passed. This is a static infrastructure prototype; ALttP gameplay is not connected yet.
+
+Read [the full M0 development update](docs/updates/2026-10-27-m0.md), follow [the changelog](CHANGELOG.md), or see [how project updates are maintained](docs/UPDATING-GITHUB.md).
+
 ## Project status
 
 | Component | Status |
@@ -19,7 +25,8 @@ The current version retains the original 2D presentation. A miniature diorama ar
 | Windows x86_64 build | Cross-compiled locally with LLVM-MinGW; native Windows gameplay testing pending |
 | Gamepad input | Implemented upstream through SDL2; physical-device testing pending |
 | Public GitHub releases | Automation prepared; publication pending repository setup and CI validation |
-| Visual overhaul | Planned; original graphics currently retained |
+| Visual overhaul | Original graphics retained in the stable game; experimental static M0 laboratory implemented separately |
+| 3D laboratory | macOS native lifecycle and Compatibility renderer verified locally; Windows/Forward+ checks pending |
 | Apple Silicon native build | Not included in the current release targets |
 
 Compilation and executable checks do not establish full gameplay compatibility. Audio, saves, room transitions, and physical controllers still need platform testing.
@@ -179,9 +186,13 @@ The packager copies an explicit set of files into a fresh staging directory and 
 5. Run the workflow with **Create draft releases** enabled to prepare `v0.1.0-macos` and `v0.1.0-windows`.
 6. Review the draft release notes and publish each platform release when ready.
 
-The workflow has been prepared locally and must be validated in the target GitHub repository. Draft creation requires repository write access. Build-related pushes to `main` also start the pipeline and prepare draft releases after validation. No ROM secret or ROM upload is needed in CI.
+The stable platform build and Windows executable-loader workflow passed in GitHub Actions during the initial desktop adaptation. Draft creation requires repository write access. Build-related pushes to `main` start that pipeline; existing versioned releases are preserved. The separate experimental 3D workflow still needs its own remote validation. No ROM secret or ROM upload is needed in CI.
 
 ## Experimental 3D laboratory (M0)
+
+![Actual M0 viewport capture: procedural 3D laboratory running on macOS](docs/3d/images/m0-laboratory.png)
+
+*Actual engine capture. Static technical prototype with a stationary marker; no ALttP gameplay or ROM resources are connected.*
 
 A ROM-free Godot 4.7.2 laboratory now verifies native-library loading and displays an original procedural scene. The macOS lifecycle and Compatibility renderer have been tested locally. Windows native loading and Forward+ rendering still require validation. The ALttP gameplay core is not connected yet.
 
