@@ -69,3 +69,11 @@ macOS. This is a static technical prototype, not a playable 3D port.
 
 Original reverse-engineering work remains credited to snesrev/zelda3 contributors;
 original game content belongs to Nintendo. See [CREDITS.md](CREDITS.md).
+
+
+## Private research milestone — 2026-10-28
+
+- Documented the C-driven animated 3D opening-room prototype and bounded macOS validation.
+- Added an actual runtime 2D/3D comparison at matching simulation tick 6300.
+- Clarified pending playable-slice, audio/save, Windows/controller and performance gates.
+- No stable binary or public 3D assets changed. See [milestone](docs/updates/2026-10-28-styled-room.md).

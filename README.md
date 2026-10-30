@@ -9,9 +9,15 @@ Maintained by **Hiran Tiago Lins Borba** · Toronto, ON, Canada
 
 This project builds on [snesrev/zelda3](https://github.com/snesrev/zelda3), a reverse-engineered C reimplementation of the SNES game. It adds platform build scripts, desktop packaging, a Triforce application icon, local asset preparation, release tooling, and project documentation.
 
-The current version retains the original 2D presentation. A miniature diorama art direction inspired by Link’s Awakening for Nintendo Switch is a **planned research and development milestone**. No 3D remake or HD texture overhaul is included in this release.
+The current version retains the original 2D presentation. A miniature diorama presentation is under development in a **private Godot prototype**. The opening room has reached a validated local milestone; no 3D remake or HD texture overhaul is included in the stable release.
 
-## Latest development update — October 27, 2026
+## Latest development update — October 28, 2026
+
+My private Godot prototype now displays an animated Link in a reconstructed 3D opening room driven by the native C simulation. P0–P4 have passed their bounded local macOS gates; interactions, combat, audio, save behavior and additional platform testing remain in development. Stable public builds retain the original 2D presentation.
+
+[Read the opening-room milestone and view the side-by-side comparison](docs/updates/2026-10-28-styled-room.md).
+
+## Previous development update — October 27, 2026
 
 I have connected the existing C gameplay implementation to Godot through an experimental native host. Controlled local tests matched the original host across 3,750 ticks, and the Godot bridge matched the standalone C state after 240 ticks. The 3D environment is still illustrative: converted maps, audio output and persistent preview saves are not implemented.
 
@@ -25,8 +31,8 @@ Read [the M1 C integration update](docs/updates/2026-10-27-m1-core.md) or [the e
 | Windows x86_64 build | Cross-compiled locally with LLVM-MinGW; native Windows gameplay testing pending |
 | Gamepad input | Implemented upstream through SDL2; physical-device testing pending |
 | Public GitHub releases | Stable platform workflow validated; see Releases for current publication status |
-| Visual overhaul | Original graphics retained in the stable game; experimental static M0 laboratory implemented separately |
-| 3D laboratory | Initial C gameplay bridge, snapshots and reference view verified on macOS; native Windows/Forward+ checks pending |
+| Visual overhaul | Original graphics retained in stable builds; private animated 3D opening room validated locally |
+| 3D laboratory | C-driven opening-room geometry and animated Link verified on macOS; playable-slice and Windows gates pending |
 | Apple Silicon native build | Not included in the current release targets |
 
 Compilation and executable checks do not establish full gameplay compatibility. Audio, saves, room transitions, and physical controllers still need platform testing.
