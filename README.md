@@ -9,13 +9,17 @@ Maintained by **Hiran Tiago Lins Borba** · Toronto, ON, Canada
 
 This project builds on [snesrev/zelda3](https://github.com/snesrev/zelda3), a reverse-engineered C reimplementation of the SNES game. It adds platform build scripts, desktop packaging, a Triforce application icon, local asset preparation, release tooling, and project documentation.
 
-The current version retains the original 2D presentation. A miniature diorama presentation is under development in a **private Godot prototype**. The opening room has reached a validated local milestone; no 3D remake or HD texture overhaul is included in the stable release.
+The current version retains the original 2D presentation. A miniature diorama presentation is under development in a **private Godot prototype**. Selected indoor/outdoor routes have reached bounded local milestones; no 3D remake or HD texture overhaul is included in the stable release.
 
-## Latest development update — October 28, 2026
+## Latest development update — November 1, 2026
 
-My private Godot prototype now displays an animated Link in a reconstructed 3D opening room driven by the native C simulation. P0–P4 have passed their bounded local macOS gates; interactions, combat, audio, save behavior and additional platform testing remain in development. Stable public builds retain the original 2D presentation.
+I have expanded the private macOS Godot prototype beyond the opening room: connected outdoor presentation, native-state pot carrying, audio output, and tested Game Over/continue recovery. The existing C core remains authoritative for gameplay. Full-world content and the modern UI remain in development.
 
-[Read the opening-room milestone and view the side-by-side comparison](docs/updates/2026-10-28-styled-room.md).
+![Original game and running 3D house exterior, captured at the same native state](docs/images/2026-11-01-exterior-comparison.png)
+
+**[View all three real gameplay comparisons and the detailed progress report](docs/updates/2026-11-01-native-3d-progress.md).** The stable public download remains 2D; this is a documentation milestone for the private prototype, not a 3D release. Current 3D work targets macOS only.
+
+[Previous opening-room milestone — October 28](docs/updates/2026-10-28-styled-room.md).
 
 ## Previous development update — October 27, 2026
 
@@ -31,8 +35,8 @@ Read [the M1 C integration update](docs/updates/2026-10-27-m1-core.md) or [the e
 | Windows x86_64 build | Cross-compiled locally with LLVM-MinGW; native Windows gameplay testing pending |
 | Gamepad input | Implemented upstream through SDL2; physical-device testing pending |
 | Public GitHub releases | Stable platform workflow validated; see Releases for current publication status |
-| Visual overhaul | Original graphics retained in stable builds; private animated 3D opening room validated locally |
-| 3D laboratory | C-driven opening-room geometry and animated Link verified on macOS; playable-slice and Windows gates pending |
+| Visual overhaul | Original graphics retained in stable builds; selected private 3D indoor/outdoor routes tested locally |
+| 3D laboratory | C-driven indoor/outdoor presentation, pot carrying, audio and recovery tested on selected macOS routes; full remake pending |
 | Apple Silicon native build | Not included in the current release targets |
 
 Compilation and executable checks do not establish full gameplay compatibility. Audio, saves, room transitions, and physical controllers still need platform testing.

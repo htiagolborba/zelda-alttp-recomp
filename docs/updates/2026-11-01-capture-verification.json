@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-01",
+  "owner": "Hiran Tiago Lins Borba",
+  "platform": "macOS Intel / AMD FirePro D700 / OpenGL compatibility",
+  "engine": "Godot 4.7.2",
+  "scope": "Private prototype; bounded routes only. Actual screenshots; no generated imagery. Original and 3D frames captured without advancing the copied native snapshot.",
+  "public_content": "Documentation and comparison screenshots only; no private implementation or game resources.",
+  "runs": [
+    {
+      "status": "PASS_BOUNDED_NATIVE_REGRESSION",
+      "samples": 441,
+      "first_tick": 6210,
+      "last_tick": 6650,
+      "checks": {
+        "nonempty_reference": true,
+        "no_duplicate_ticks": true,
+        "exact_reference_interval": true,
+        "all_snapshot_fields_equal": true,
+        "runtime_report_no_error": true,
+        "clean_engine_log": true,
+        "native_shutdown_observed": true,
+        "audio_was_exercised": true,
+        "zero_audio_underruns": true,
+        "zero_dropped_audio_frames": true,
+        "anchor_error_at_most_one_pixel": true,
+        "requested_checkpoint_files_exist": true,
+        "all_requested_capture_ticks_present": true,
+        "process_exit_zero": true,
+        "readonly_inputs_unchanged": true
+      }
+    },
+    {
+      "status": "PASS_BOUNDED_NATIVE_REGRESSION",
+      "samples": 1424,
+      "first_tick": 1504,
+      "last_tick": 2927,
+      "checks": {
+        "nonempty_reference": true,
+        "no_duplicate_ticks": true,
+        "exact_reference_interval": true,
+        "all_snapshot_fields_equal": true,
+        "runtime_report_no_error": true,
+        "clean_engine_log": true,
+        "native_shutdown_observed": true,
+        "audio_was_exercised": true,
+        "zero_audio_underruns": true,
+        "zero_dropped_audio_frames": true,
+        "anchor_error_at_most_one_pixel": true,
+        "requested_checkpoint_files_exist": true,
+        "all_requested_capture_ticks_present": true,
+        "process_exit_zero": true,
+        "readonly_inputs_unchanged": true
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "file": "docs/images/2026-11-01-house-comparison.png",
+      "tick": 6300,
+      "state_hash": "3daa84647b7bef97",
+      "original_frame_dimensions": [
+        256,
+        224
+      ],
+      "viewport_dimensions": [
+        4006,
+        2253
+      ],
+      "card_dimensions": [
+        2400,
+        1200
+      ],
+      "original_frame_sha256": "c633b33e286b2fceedef3ac2a24fc1968a4852c08ced0ce02346c5af64f4aae4",
+      "viewport_sha256": "91e20820d6b15070c5ac842439ba8533895df1440064d5523db77d68c621f212",
+      "comparison_sha256": "d804edf9e514d37a64ccbf396600b0ac129570e75b774a4529b1970609013f50",
+      "processing": "Full frames preserved. Original enlarged 3x with nearest-neighbor sampling; 3D viewport reduced proportionally with Lanczos. Labels and borders added; no scene edits."
+    },
+    {
+      "file": "docs/images/2026-11-01-exterior-comparison.png",
+      "tick": 6450,
+      "state_hash": "91f00c31cfae8267",
+      "original_frame_dimensions": [
+        256,
+        224
+      ],
+      "viewport_dimensions": [
+        4006,
+        2253
+      ],
+      "card_dimensions": [
+        2400,
+        1200
+      ],
+      "original_frame_sha256": "49639d19c91ff22168e0b0176f49744b4165cd5cc510685dc3fb700fc48f5a8c",
+      "viewport_sha256": "443e08a77757a644c568fca711ae17af010fe25c6a936f4689eefe167164a9d2",
+      "comparison_sha256": "03d3691d04ff4df8d1ed9eec21f8d3e9687b0f7900a8183583a77962b81e3185",
+      "processing": "Full frames preserved. Original enlarged 3x with nearest-neighbor sampling; 3D viewport reduced proportionally with Lanczos. Labels and borders added; no scene edits."
+    },
+    {
+      "file": "docs/images/2026-11-01-pot-comparison.png",
+      "tick": 2577,
+      "state_hash": "baadfa77b24d250b",
+      "original_frame_dimensions": [
+        256,
+        224
+      ],
+      "viewport_dimensions": [
+        1280,
+        720
+      ],
+      "card_dimensions": [
+        2400,
+        1200
+      ],
+      "original_frame_sha256": "ed863efb6520b3d3dab98f9e33a09e6d36047325f5cc65ca803614a99ead2f4c",
+      "viewport_sha256": "63cfcfb7022f6e9694556b27340b4536c9e3d7640dbe1405b85af3e4339d2318",
+      "comparison_sha256": "38a7c48228fc8238db09f9e1fa8e8487c0cfa003cf124ec3608fb9676041e46c",
+      "processing": "Full frames preserved. Original enlarged 3x with nearest-neighbor sampling; 3D viewport reduced proportionally with Lanczos. Labels and borders added; no scene edits."
+    }
+  ]
+}

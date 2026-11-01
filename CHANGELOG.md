@@ -7,6 +7,16 @@ milestone is not automatically a new downloadable game release.
 
 ## Unreleased — experimental 3D laboratory
 
+### 2026-11-01 — private macOS prototype progress
+
+- Published three same-state, side-by-side screenshots from actual original/3D rendering sessions: opening house, house exterior and pot carrying.
+- Documented private connected outdoor presentation, reusable indoor props, carry animations, native PCM audio, isolated saves and Game Over/continue recovery.
+- Recorded bounded regression evidence, source-map pipeline coverage and explicit unfinished work; offline previews and conversion checks are distinguished from live gameplay.
+- Added an English LinkedIn draft and comparison-image posting guide.
+- Documentation milestone only: no private models, textures, game data, keys, saves or prototype candidate files are published; stable downloads remain 2D. No Windows build was requested for this update.
+- See [the detailed update](docs/updates/2026-11-01-native-3d-progress.md).
+
+
 ### 2026-10-27 — M1: initial C gameplay bridge
 
 - Added an SDL-free C gameplay host, copied snapshots, Godot commands, native input mapping and a live reference panel from the same simulation.
