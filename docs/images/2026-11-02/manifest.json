@@ -1,0 +1,371 @@
+{
+  "date": "2026-11-02",
+  "scope": "Documentation images only. Real captures/rendered art, no AI-generated gameplay. Crops and resizing only; original pixel art uses nearest-neighbor. Different cameras/states explicitly labeled. Private paths omitted.",
+  "images": [
+    {
+      "image": "docs/images/2026-11-02/original-vs-redesigned.png",
+      "sha256": "f0764f2e3b4dd6da15dc7b16474ad3a6fa4010f0041251c9c34a15a18d07d97f",
+      "title": "FROM ORIGINAL 2D TO A 3D PRESENTATION",
+      "sources": [
+        {
+          "label": "Original 2D | retained November 1 capture",
+          "source_file": "original-6300.png",
+          "source_set": "outdoor-map-execution/OWM-02/publication-capture-01/house-exterior-01/original-6300.png",
+          "source_sha256": "c633b33e286b2fceedef3ac2a24fc1968a4852c08ced0ce02346c5af64f4aae4",
+          "crop": null
+        },
+        {
+          "label": "Godot 3D | retained November 1 capture",
+          "source_file": "pose-6300.png",
+          "source_set": "outdoor-map-execution/OWM-02/publication-capture-01/house-exterior-01/pose-6300.png",
+          "source_sha256": "91e20820d6b15070c5ac842439ba8533895df1440064d5523db77d68c621f212",
+          "crop": null
+        },
+        {
+          "label": "Original 2D | retained November 1 capture",
+          "source_file": "original-6450.png",
+          "source_set": "outdoor-map-execution/OWM-02/publication-capture-01/house-exterior-01/original-6450.png",
+          "source_sha256": "49639d19c91ff22168e0b0176f49744b4165cd5cc510685dc3fb700fc48f5a8c",
+          "crop": null
+        },
+        {
+          "label": "Godot 3D | retained November 1 capture",
+          "source_file": "pose-6450.png",
+          "source_set": "outdoor-map-execution/OWM-02/publication-capture-01/house-exterior-01/pose-6450.png",
+          "source_sha256": "443e08a77757a644c568fca711ae17af010fe25c6a936f4689eefe167164a9d2",
+          "crop": null
+        },
+        {
+          "label": "Original 2D | native gameplay reference",
+          "source_file": "13834-secret-cellar-drop-settle.png",
+          "source_set": "p5-research/combat-research-b/attempt-01/13834-secret-cellar-drop-settle.png",
+          "source_sha256": "4349c353489aa69ffbc305437fcdeb874816efab5de21eb2c67215d8bdf9c01c",
+          "crop": null
+        },
+        {
+          "label": "Current source-art preview | resource 085",
+          "source_file": "room-085.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-58/indoor-edges-delta-01/room-085.png",
+          "source_sha256": "eac3b9214647bf7474967d2363252e128ffeb18b7a0c6bb43c984edbc22e27b2",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Original source BG2 | gate detail",
+          "source_file": "source-bg2.png",
+          "source_set": "production-overworld-art/castle-01/source-bg2.png",
+          "source_sha256": "617575f7881db0d695d43a70fc3e8541f8c50b254583e917332bc1cf090bf1b0",
+          "crop": [
+            320,
+            536,
+            704,
+            800
+          ]
+        },
+        {
+          "label": "Current Godot art | stone and closed gate",
+          "source_file": "area-027.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-027.png",
+          "source_sha256": "33dd7f32be8d302db1908029d8bc5681b36b8ef1521bb8887ec2b9f267e29480",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        }
+      ]
+    },
+    {
+      "image": "docs/images/2026-11-02/cellar-comparison.png",
+      "sha256": "342a7ae843cde9d3aa7a0b39dcbab3a1008657d4847cd2ca322e9bf3fe837428",
+      "title": "SECRET CASTLE CELLAR | VISUAL RECONSTRUCTION",
+      "sources": [
+        {
+          "label": "Original 2D | native gameplay reference",
+          "source_file": "13834-secret-cellar-drop-settle.png",
+          "source_set": "p5-research/combat-research-b/attempt-01/13834-secret-cellar-drop-settle.png",
+          "source_sha256": "4349c353489aa69ffbc305437fcdeb874816efab5de21eb2c67215d8bdf9c01c",
+          "crop": null
+        },
+        {
+          "label": "Current source-art preview | resource 085",
+          "source_file": "room-085.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-58/indoor-edges-delta-01/room-085.png",
+          "source_sha256": "eac3b9214647bf7474967d2363252e128ffeb18b7a0c6bb43c984edbc22e27b2",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        }
+      ]
+    },
+    {
+      "image": "docs/images/2026-11-02/castle-comparison.png",
+      "sha256": "68d96f801ca024aaffa510ff81f16bc9f4077bc0fef8fce12c546c50c13a4a53",
+      "title": "HYRULE CASTLE GATE | VISUAL RECONSTRUCTION",
+      "sources": [
+        {
+          "label": "Original source BG2 | gate detail",
+          "source_file": "source-bg2.png",
+          "source_set": "production-overworld-art/castle-01/source-bg2.png",
+          "source_sha256": "617575f7881db0d695d43a70fc3e8541f8c50b254583e917332bc1cf090bf1b0",
+          "crop": [
+            320,
+            536,
+            704,
+            800
+          ]
+        },
+        {
+          "label": "Current Godot art | stone and closed gate",
+          "source_file": "area-027.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-027.png",
+          "source_sha256": "33dd7f32be8d302db1908029d8bc5681b36b8ef1521bb8887ec2b9f267e29480",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        }
+      ]
+    },
+    {
+      "image": "docs/images/2026-11-02/interior-evolution.png",
+      "sha256": "4399f4d3a88f975faf9e5b965997d069146d30517ff02634ee47dcd09fd5820b",
+      "title": "EARLIER BUILD / CURRENT VISUAL BASELINE",
+      "sources": [
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-018.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-018.png",
+          "source_sha256": "1ee2716907283c35ed4ef3c4e0a6688da8920ae2a41a805f746c6db7ec873de1",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-018.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-57/indoor-themes-delta-01/room-018.png",
+          "source_sha256": "fe193eb3d70ef8ab740e25e8c497d8246c65afc0b33fe8c5030d9082d28cbd02",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-054.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-054.png",
+          "source_sha256": "fcc37d7ae8d839a110ae1a7f0703a6f0760ac15878bac001944ab42754ddcade",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-054.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-58/indoor-edges-delta-01/room-054.png",
+          "source_sha256": "5292b10d0e7583901911f5b3c5fadc8efb04e77e6a1e44dda9446d80d0b4d822",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-085.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-085.png",
+          "source_sha256": "d530e337820382b181a7ce6881356b2b3ce8800dc40b694f265d2d2f7cb7721b",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-085.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-58/indoor-edges-delta-01/room-085.png",
+          "source_sha256": "eac3b9214647bf7474967d2363252e128ffeb18b7a0c6bb43c984edbc22e27b2",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-097.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-097.png",
+          "source_sha256": "1747d152c6a3fb89b00065a4c188096d772ce88588136ccbb93d29f7d0165662",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-097.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-57/indoor-themes-delta-01/room-097.png",
+          "source_sha256": "857a86997f7e2fc014d8581700a6d7d08238bd80c4ff9456203e79f10585d338",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-126.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-126.png",
+          "source_sha256": "4563838ff72baa244f70b61c476ffed0f2ab5fcc9a43f5572e2a34ba5987e518",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-126.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-57/indoor-themes-delta-01/room-126.png",
+          "source_sha256": "3e6b8c360f92373a661a7e335b873266e0dabff9c1d325c670d8ff16ef57b75a",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Earlier source-art baseline | batch 42",
+          "source_file": "room-260.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-42/indoor-atlas-01/room-260.png",
+          "source_sha256": "07cbfee8672aac30b7fd81c8384ce22c15e22ac8ee23729cbd4877ed58ad3c48",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        },
+        {
+          "label": "Current retained art set | batches 56-59",
+          "source_file": "room-260.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-57/indoor-themes-delta-01/room-260.png",
+          "source_sha256": "32ddb1006dbb8af21e880e9d47c05284642e097491d1232ffc4723f0f352a2a3",
+          "crop": [
+            140,
+            35,
+            1140,
+            675
+          ]
+        }
+      ]
+    },
+    {
+      "image": "docs/images/2026-11-02/exterior-gallery.png",
+      "sha256": "79c435317762172e8a6617c134d6104df855353f244a1e87d52c9a13ccddaf06",
+      "title": "BUILDING A REUSABLE WORLD ART KIT",
+      "sources": [
+        {
+          "label": "Current art detail | source resource 019",
+          "source_file": "area-019.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-019.png",
+          "source_sha256": "cca2df2527257619a5aef10c59605d1ebf0b89403ca18561c0da0185ff652ade",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        },
+        {
+          "label": "Current art detail | source resource 030",
+          "source_file": "area-030.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-030.png",
+          "source_sha256": "ad7b949df4ac1189a3107d05fc780d8ca28684089a25c2076dd74e4d0e5a31f9",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        },
+        {
+          "label": "Current art detail | source resource 048",
+          "source_file": "area-048.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-048.png",
+          "source_sha256": "8e30ec480a9599e214091e268ebb4255304189bee424fe4991026cb6b50bc04d",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        },
+        {
+          "label": "Current art detail | source resource 067",
+          "source_file": "area-067.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-067.png",
+          "source_sha256": "966254e9943ce0b475454abe31d4ee871f35c4ef027d4ac7afdb6321d622aabd",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        },
+        {
+          "label": "Current art detail | source resource 117",
+          "source_file": "area-117.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-117.png",
+          "source_sha256": "190d051972206b2c28b6383d79a22ed3a5388030aac1f1447d8fe7e04f3efeca",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        },
+        {
+          "label": "Current art detail | source resource 027",
+          "source_file": "area-027.png",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-55/shared-stone-art-01/area-027.png",
+          "source_sha256": "33dd7f32be8d302db1908029d8bc5681b36b8ef1521bb8887ec2b9f267e29480",
+          "crop": [
+            0,
+            0,
+            1440,
+            695
+          ]
+        }
+      ]
+    }
+  ]
+}

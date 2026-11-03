@@ -7,6 +7,49 @@ milestone is not automatically a new downloadable game release.
 
 ## Unreleased — experimental 3D laboratory
 
+### 2026-11-02 — source-driven visual production milestone
+
+This entry summarizes private implementation since the previous published checkpoint. The public commit contains documentation and screenshots only; stable binaries and public prototype code are unchanged.
+
+#### Exterior content and architecture
+
+- Retained 80 normal decoded overworld resource baselines and added separate offline previews for special resources 128 (grove/under-bridge shared resource) and 129 (Zora Falls). Special entrance transforms, story variants and runtime overlays remain pending.
+- Expanded shared terrain/foliage/water/rock/path art and eight regional biome styles.
+- Added 300 source-adjacent fence rails across the normal baseline; disconnected source gaps remain open.
+- Added 27 local house composites across 16 resources, including one building represented by two boundary-clipped pieces. These are placements, not 27 unique buildings.
+- Added 58 landmark placements, including cave/skull facades and first-pass sanctuary, temple and tower architecture. The main pyramid remains unfinished; a portal proxy is not a reconstructed pyramid.
+- Added a textured two-leaf castle gate under the existing exact source closed-bar predicate, with a procedural fallback. Authored model fitting does not change native gate state or collision.
+- Reused a shared triplanar stone material on appropriate castle/temple/sanctuary masonry while preserving presentation cutaways.
+- Extended art-only first-part exterior actor previews from 134 to 147 placements, including 13 static Armos placements. No AI, statue activation or combat acceptance is implied.
+
+#### Indoor visual production
+
+- Produced a fresh 320-resource art baseline, including unused/default-only resources. This does not represent 320 completed playable rooms.
+- Prepended all eight literal native base layouts before per-resource object layers.
+- Compiled 19,972 supported source-object descriptors, including repeated base-layout objects. Added partial source-order floor/wall cell composition and grouped geometry.
+- Expanded walls/corners, floor fills, ceiling masks, rails, block rows, furniture, stairs, carpets, torches, water, spikes, holes, columns, statues and curtains.
+- Added 508 static portal archetypes: 300 ordinary, 105 small-key and 103 two-way shutter descriptors. Runtime lock and shutter behavior remain deferred.
+- Added 715 straight edge descriptors: 326 water edges and 389 pit edges. Native conditional endpoint/corner semantics remain incomplete.
+- Reused converted wooden flooring and shared stone materials; propagated authored themes through 21 nonconflicting source palette groups. These themes do not certify native RGB colors or dungeon membership.
+- Expanded static actor art to 286 source placements in 87 indoor resources, including Orange Stalfos, Gibdo, Wizzrobe, Bubble and Leever adapters. Source plane tags are retained; elevation, spawning and state rules are unfinished.
+
+#### Production efficiency, verification and recorded issues
+
+- Moved to reusable content batches and render/load checks rather than repeated cellar gameplay runs. Existing native gameplay routes remain separate evidence.
+- Added incremental image reuse only when room JSON is identical, preserving image hashes and actual rendering provenance. Retained images are not current-renderer validation.
+- Rendered all 320 resources freshly in batch 56, followed by targeted deltas of 230 themed, 62 edge-trim and 28 actor-bearing resources. Successful batches reported no logged errors or failed PNG writes.
+- Preserved failed receipts: a Leever clip required an isolated repair; static Armos acceptance does not resolve its earlier animation failure; scenery-template cleanup and a material typing error were fixed before clean replacement renders.
+- Kept two wrapped resource-268 ceiling strips as explicit omissions. Unknown overlay semantics, BG1/BG2 ordering and unsupported families remain documented.
+- Added five comparison/gallery boards with hashed source-image provenance: original/reference vs. redesigned presentation, earlier/current interiors, and six exterior environments.
+- Refreshed the README, detailed development report, GitHub discussion draft, LinkedIn draft and GitHub Desktop commit instructions in English.
+
+#### Scope and next work
+
+- Current production target: macOS. No Windows build, new release, native C behavior change or gameplay replay was performed for this documentation update.
+- Private models, textures, ROM/game data, keys, saves, absolute private paths and prototype candidates are excluded from the public changes.
+- Next: remaining visual families, source layers/overlays, special architecture and refinement; then broader native-state gameplay integration and route validation.
+- [Full report and image gallery](docs/updates/2026-11-02-visual-production.md). Upstream reverse engineering remains credited to snesrev/zelda3; original game/art belongs to Nintendo.
+
 ### 2026-11-01 — private macOS prototype progress
 
 - Published three same-state, side-by-side screenshots from actual original/3D rendering sessions: opening house, house exterior and pot carrying.

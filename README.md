@@ -1,4 +1,4 @@
-# Zelda A Link to the past — macOS & Windows
+# Zelda: A Link to the Past — Desktop Adaptation & 3D Research
 
 **A desktop adaptation project for The Legend of Zelda: A Link to the Past.**
 
@@ -11,21 +11,21 @@ This project builds on [snesrev/zelda3](https://github.com/snesrev/zelda3), a re
 
 The current version retains the original 2D presentation. A miniature diorama presentation is under development in a **private Godot prototype**. Selected indoor/outdoor routes have reached bounded local milestones; no 3D remake or HD texture overhaul is included in the stable release.
 
-## Latest development update — November 1, 2026
+## Latest development update — November 2, 2026
 
-I have expanded the private macOS Godot prototype beyond the opening room: connected outdoor presentation, native-state pot carrying, audio output, and tested Game Over/continue recovery. The existing C core remains authoritative for gameplay. Full-world content and the modern UI remain in development.
+I am expanding the private macOS prototype from selected playable scenes into a reusable, source-driven visual production pipeline. The latest work adds indoor base layouts, stone and wood materials, water/pit trim, door archetypes, regional architecture and static enemy art previews.
 
-![Original game and running 3D house exterior, captured at the same native state](docs/images/2026-11-01-exterior-comparison.png)
+![Original castle gate source detail beside the current Godot art preview](docs/images/2026-11-02/castle-comparison.png)
 
-**[View all three real gameplay comparisons and the detailed progress report](docs/updates/2026-11-01-native-3d-progress.md).** The stable public download remains 2D; this is a documentation milestone for the private prototype, not a 3D release. Current 3D work targets macOS only.
+*Original source BG2 detail (left), current offline Godot art (right). Different framing; this is a visual preview, not a matched gameplay capture or a completed castle.*
 
-[Previous opening-room milestone — October 28](docs/updates/2026-10-28-styled-room.md).
+![Six exterior environments rendered in the private Godot art studio](docs/images/2026-11-02/exterior-gallery.png)
 
-## Previous development update — October 27, 2026
+*Actual art renders: sanctuary, eastern ruins, desert architecture, dark tower, ice entrance and castle gate. Architecture and gameplay integration remain incomplete.*
 
-I have connected the existing C gameplay implementation to Godot through an experimental native host. Controlled local tests matched the original host across 3,750 ticks, and the Godot bridge matched the standalone C state after 240 ticks. The 3D environment is still illustrative: converted maps, audio output and persistent preview saves are not implemented.
+**[Full visual progress report and comparison gallery](docs/updates/2026-11-02-visual-production.md)** · **[Detailed changelog](CHANGELOG.md)** · [Previous gameplay checkpoint](docs/updates/2026-11-01-native-3d-progress.md)
 
-Read [the M1 C integration update](docs/updates/2026-10-27-m1-core.md) or [the earlier M0 update](docs/updates/2026-10-27-m0.md), follow [the changelog](CHANGELOG.md), or see [how project updates are maintained](docs/UPDATING-GITHUB.md).
+The public stable packages retain the original **2D presentation**. This update publishes documentation and screenshots of private research; it does not contain the private 3D implementation or converted resources. Active 3D development targets **macOS only**.
 
 ## Project status
 
@@ -35,8 +35,8 @@ Read [the M1 C integration update](docs/updates/2026-10-27-m1-core.md) or [the e
 | Windows x86_64 build | Cross-compiled locally with LLVM-MinGW; native Windows gameplay testing pending |
 | Gamepad input | Implemented upstream through SDL2; physical-device testing pending |
 | Public GitHub releases | Stable platform workflow validated; see Releases for current publication status |
-| Visual overhaul | Original graphics retained in stable builds; selected private 3D indoor/outdoor routes tested locally |
-| 3D laboratory | C-driven indoor/outdoor presentation, pot carrying, audio and recovery tested on selected macOS routes; full remake pending |
+| Visual overhaul | Private art baselines for 80 normal exterior resources, two special resources and 320 indoor resources; partial visuals, not completed maps |
+| 3D laboratory | Selected C-driven gameplay routes retained; separate batch art studios expand content before broader integration |
 | Apple Silicon native build | Not included in the current release targets |
 
 Compilation and executable checks do not establish full gameplay compatibility. Audio, saves, room transitions, and physical controllers still need platform testing.
@@ -198,39 +198,20 @@ The packager copies an explicit set of files into a fresh staging directory and 
 
 The stable platform build and Windows executable-loader workflow passed in GitHub Actions during the initial desktop adaptation. Draft creation requires repository write access. Build-related pushes to `main` start that pipeline; existing versioned releases are preserved. The separate experimental 3D workflow still needs its own remote validation. No ROM secret or ROM upload is needed in CI.
 
-## Experimental C integration (M1)
+## 3D development direction
 
-![Actual C/Godot integration viewport](docs/3d/images/m1-core-integration.png)
+The private prototype uses **C** for the existing game simulation, **GDScript/Godot** for presentation, **Python** for source-content processing and production tools, and shaders/materials for surface treatment. It does not use Nintendo's Switch engine.
 
-*Actual macOS capture during the game intro. The right panel is produced by the same C simulation. The 3D blockout is not a converted map; audio is muted and disk save writes are disabled.*
+The current production order is:
 
-See [build/run instructions](docs/3d/CORE-INTEGRATION.md), [verification and limits](docs/3d/M1-RESULTS.md), and [milestone notes](docs/updates/2026-10-27-m1-core.md). This is an experimental developer preview, not a new playable 3D release. The historical M0 screenshot below remains the pre-integration baseline.
+1. Build reusable exterior and indoor art families across the source inventory.
+2. Refine architecture, layers, special graphics and regional presentation.
+3. Bind the expanded presentation to native gameplay state and validate connected routes.
+4. Polish UI, animation, performance and release packaging.
 
-## Experimental 3D laboratory (M0)
+Art generation and gameplay acceptance are tracked separately. A rendered resource can include unused or shared layouts; its presence in an atlas does not mean a completed playable room. Private models and textures are not included in this repository.
 
-![Actual M0 viewport capture: procedural 3D laboratory running on macOS](docs/3d/images/m0-laboratory.png)
-
-*Actual engine capture. Static technical prototype with a stationary marker; no ALttP gameplay or ROM resources are connected.*
-
-A ROM-free Godot 4.7.2 laboratory now verifies native-library loading and displays an original procedural scene. The macOS lifecycle and Compatibility renderer have been tested locally. Windows native loading and Forward+ rendering still require validation. The original M0 scene does not connect gameplay; optional M1 integration is now available above.
-
-See [setup and commands](docs/3d/GETTING-STARTED.md), [verified M0 results](docs/3d/M0-RESULTS.md), and the [actual viewport capture](docs/3d/images/m0-laboratory.png). This experimental project is separate from the stable 2D game releases.
-
-## Visual development roadmap
-
-The proposed architecture, visual requirements, hardware profiles and milestone gates are documented in the [3D blueprint](docs/3d/BLUEPRINT.md), [architecture](docs/3d/ARCHITECTURE.md), [decisions](docs/3d/DECISIONS.md), and [implementation plan](docs/3d/IMPLEMENTATION-PLAN.md). These documents describe the target architecture; only the M0/M1 capabilities explicitly reported above have been implemented.
-
-The long-term goal is to explore a handcrafted miniature aesthetic: rounded forms, stylized materials, soft lighting, and a diorama camera, while retaining the original gameplay logic.
-
-The next milestone is a **small playable visual prototype**, not an immediate replacement of all game graphics:
-
-1. Establish the original renderer as a gameplay reference.
-2. Prototype one outdoor area with original 3D assets and an inclined camera.
-3. Connect the scene to the C game state and verify spatial alignment and collisions.
-4. Add one interior, animation, interactions, and transitions.
-5. Evaluate performance and the asset-authoring workflow before expanding.
-
-Shaders or upscaled textures alone cannot provide that result. Renderer integration and new models, materials, and animation are substantial work still ahead.
+Development history: [November 2 visual production](docs/updates/2026-11-02-visual-production.md), [November 1 gameplay](docs/updates/2026-11-01-native-3d-progress.md), [October 28 opening room](docs/updates/2026-10-28-styled-room.md), [M1 C bridge](docs/updates/2026-10-27-m1-core.md), [M0 laboratory](docs/updates/2026-10-27-m0.md). Early blueprint/setup documents describe their original milestones and may differ from the current private production workflow. See [how updates are maintained](docs/UPDATING-GITHUB.md).
 
 ## Credits and licensing
 

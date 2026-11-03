@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-02",
+  "public_scope": "Documentation and screenshots only; no public runtime changes or new releases.",
+  "target": "macOS",
+  "counts": {
+    "normal_exterior_resources": 80,
+    "special_exterior_previews": 2,
+    "indoor_resource_baseline": 320,
+    "supported_indoor_descriptors_including_base_layout_reuse": 19972,
+    "indoor_static_actors": 286,
+    "indoor_resources_with_static_actors": 87,
+    "exterior_first_part_static_actor_previews": 147
+  },
+  "verified_image_batches": [
+    {
+      "batch": 56,
+      "art_output": "indoor-atlas-05",
+      "saved_images": 320,
+      "all_png_write_results_zero": true,
+      "scope": "Source-object art stage. Partial source-object floor with C0 rectangular ceiling cutouts. Source default layouts and supported-cell art composition. Door states are static archetypes, not native save/runtime state. BG semantics, unsupported families and gameplay remain pending."
+    },
+    {
+      "batch": 57,
+      "art_output": "indoor-themes-delta-01",
+      "saved_images": 230,
+      "all_png_write_results_zero": true,
+      "scope": "Source-object art stage. Partial source-object floor with C0 rectangular ceiling cutouts. Source default layouts and supported-cell art composition. Door states are static archetypes, not native save/runtime state. BG semantics, unsupported families and gameplay remain pending."
+    },
+    {
+      "batch": 58,
+      "art_output": "indoor-edges-delta-01",
+      "saved_images": 62,
+      "all_png_write_results_zero": true,
+      "scope": "Source-object art stage. Partial source-object floor with C0 rectangular ceiling cutouts. Source default layouts and supported-cell art composition. Door states are static archetypes, not native save/runtime state. BG semantics, unsupported families and gameplay remain pending."
+    },
+    {
+      "batch": 59,
+      "art_output": "indoor-statue-actors-delta-01",
+      "saved_images": 28,
+      "all_png_write_results_zero": true,
+      "scope": "Source-object art stage. Partial source-object floor with C0 rectangular ceiling cutouts. Source default layouts and supported-cell art composition. Door states are static archetypes, not native save/runtime state. BG semantics, unsupported families and gameplay remain pending."
+    },
+    {
+      "batch": 60,
+      "art_output": "overworld-art-actors-01",
+      "saved_images": 2,
+      "all_png_write_results_zero": true,
+      "scope": "Batch content production previews. Actual Godot3D geography/materials/prefabs, no C gameplay, AI, collision or transition testing. Static actors follow source first-part spawn placements only."
+    },
+    {
+      "batch": 61,
+      "art_output": "special-base-art-01",
+      "saved_images": 2,
+      "all_png_write_results_zero": true,
+      "scope": "Batch content production previews. Actual Godot3D geography/materials/prefabs, no C gameplay, AI, collision or transition testing. Static actors follow source first-part spawn placements only."
+    }
+  ],
+  "current_indoor_manifest": {
+    "fresh_images_in_last_delta": 28,
+    "retained_images": 292,
+    "retention_limit": "Retained images require identical room JSON but do not verify the current renderer."
+  },
+  "private_implementation_excluded": true,
+  "gameplay_replay_performed_for_this_publication": false,
+  "limitations": [
+    "Not completed rooms/maps or whole-game validation",
+    "Art studio does not replace playable indoor renderer",
+    "Native layers, story variants, actor behavior and detailed architecture incomplete",
+    "Special resource variants and entry transforms unverified",
+    "Two wrapped ceiling strips remain omitted"
+  ],
+  "image_provenance": "../images/2026-11-02/manifest.json"
+}
