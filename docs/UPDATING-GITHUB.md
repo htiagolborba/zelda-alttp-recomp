@@ -46,4 +46,4 @@ an unrelated development update.
 
 ## Current documentation entry points
 
-Maintain docs/README.md, CURRENT-STATUS.md and AI-HANDOFF.md as the current navigation/status/working contract. Put dated detail in updates/ and social drafts in social/. Do not append a competing current status to every historical report. Preserve historical paths. Local private pointers live under ignored .local/; never stage them. Screenshot figures must retain provenance and explicit comparison limits.
+Maintain docs/README.md, CURRENT-STATUS.md and AI-HANDOFF.md as the current navigation/status/working contract. Put dated detail in updates/. Do not append a competing current status to every historical report. Preserve historical paths. Local private pointers live under ignored .local/; never stage them. Screenshot figures must retain provenance and explicit comparison limits.

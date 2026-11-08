@@ -36,3 +36,6 @@ local-data/
 
 # Machine-local AI routing and private-workspace pointers
 .local/
+
+# Personal publication drafts are kept outside this repository
+docs/social/

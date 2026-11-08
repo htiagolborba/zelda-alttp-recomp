@@ -17,7 +17,7 @@ A fresh clone without the local pointer can work on public code/documentation bu
 | presentation/godot/ | Early public 3D laboratory/scaffolding; not private 85 |
 | scripts/ | Build, asset-preparation, packaging and bounded test tooling |
 | packaging/ | Platform launcher/bundle resources |
-| docs/ | Current status, dated evidence reports, composed screenshots and social drafts |
+| docs/ | Current status, dated evidence reports, composed screenshots |
 | .github/workflows/ | Existing CI/release definitions; do not trigger a release for a documentation update |
 
 The C simulation owns gameplay state. Godot/GDScript presents copied state; Python processes source content and orchestrates art production; shaders provide surface treatment. Private art viewers use source catalogs/static visual registries and are not yet the complete C-driven game. Local selected resources are components, not Nintendo's engine.
@@ -38,6 +38,6 @@ Use existing original BG2 and top-down 3D area44 references to refine terrain cl
 
 ## Publication and attribution
 
-Only publish explicitly scoped code/docs and composed real-capture figures. Private models, textures, ROM/game data, keys, saves, local launch configs and absolute private paths remain excluded. Review an explicit file list before staging; avoid blanket git add. November 8 authorization covers this documentation/screenshots commit, not ongoing unrestricted publishing. LinkedIn text is a draft; do not post it automatically.
+Only publish explicitly scoped code/docs and composed real-capture figures. Private models, textures, ROM/game data, keys, saves, local launch configs and absolute private paths remain excluded. Review an explicit file list before staging; avoid blanket git add. November 8 authorization covers this documentation/screenshots commit, not ongoing unrestricted publishing. Personal publication drafts and posting instructions must remain outside this repository.
 
 Credit Hiran for his adaptation/presentation/production work with AI assistance; credit snesrev/zelda3 for the upstream reverse engineering and Nintendo for the original game/art. Never claim that Hiran independently reverse-engineered the entire game or that the Switch engine was obtained.

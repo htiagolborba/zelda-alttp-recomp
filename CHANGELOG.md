@@ -18,7 +18,6 @@ Documentation/screenshots milestone covering private work through candidate 85. 
 - Recorded82 clean fresh exterior resource renders in84 and eleven clean affected landscape renders in85. Preserved failed batch02 and its fresh-room-width repair; no new native gameplay acceptance inferred.
 - Added full-area original BG2/3D plan comparison and four labeled real-capture boards with hashed provenance. Different framing/state and stand-in scenery are disclosed.
 - Reorganized documentation navigation, current status, public/private architecture and Claude/AI entry points. Local private routing is ignored by Git; historical links preserved. Project overview and credits updated in English.
-- Prepared an English LinkedIn draft with image order/alt text. Nothing posted automatically.
 - Next: source-specific terrain/elevation, coherent region silhouettes, layers/overlays and architecture/special-area refinement; broader native-state integration follows the visual gates. No reliable game-wide percentage.
 
 [Detailed report and comparisons](docs/updates/2026-11-08-landscape-and-handoff.md) · [Current status](docs/CURRENT-STATUS.md).
@@ -57,7 +56,7 @@ This entry summarizes private implementation since the previous published checkp
 - Preserved failed receipts: a Leever clip required an isolated repair; static Armos acceptance does not resolve its earlier animation failure; scenery-template cleanup and a material typing error were fixed before clean replacement renders.
 - Kept two wrapped resource-268 ceiling strips as explicit omissions. Unknown overlay semantics, BG1/BG2 ordering and unsupported families remain documented.
 - Added five comparison/gallery boards with hashed source-image provenance: original/reference vs. redesigned presentation, earlier/current interiors, and six exterior environments.
-- Refreshed the README, detailed development report, GitHub discussion draft, LinkedIn draft and GitHub Desktop commit instructions in English.
+- Refreshed the README, detailed development report, GitHub development notes in English.
 
 #### Scope and next work
 
@@ -71,7 +70,6 @@ This entry summarizes private implementation since the previous published checkp
 - Published three same-state, side-by-side screenshots from actual original/3D rendering sessions: opening house, house exterior and pot carrying.
 - Documented private connected outdoor presentation, reusable indoor props, carry animations, native PCM audio, isolated saves and Game Over/continue recovery.
 - Recorded bounded regression evidence, source-map pipeline coverage and explicit unfinished work; offline previews and conversion checks are distinguished from live gameplay.
-- Added an English LinkedIn draft and comparison-image posting guide.
 - Documentation milestone only: no private models, textures, game data, keys, saves or prototype candidate files are published; stable downloads remain 2D. No Windows build was requested for this update.
 - See [the detailed update](docs/updates/2026-11-01-native-3d-progress.md).
 

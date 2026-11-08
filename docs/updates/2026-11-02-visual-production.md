@@ -63,6 +63,3 @@ Next I will continue the visual families and architecture pass, then bind the ex
 
 - [Image hashes, source hashes and crop provenance](../images/2026-11-02/manifest.json)
 - [Sanitized milestone evidence summary](2026-11-02-evidence.json)
-- [Ready-to-paste GitHub update](../social/github-2026-11-02.md)
-- [Ready-to-paste LinkedIn post](../social/linkedin-2026-11-02.md)
-- [GitHub Desktop commit instructions](../COMMIT-2026-11-02.md)
