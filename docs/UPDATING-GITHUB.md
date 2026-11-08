@@ -13,7 +13,7 @@ Owner: Hiran Tiago Lins Borba. All public-facing updates should be written in En
 5. Record verification details in the appropriate technical report. Do not turn
    a successful compile into a claim of tested gameplay or hardware support.
 6. Commit the code and documentation together, or make a clearly named follow-up
-   documentation commit. Push through GitHub Desktop and review Actions results.
+   documentation commit. Push through GitHub Desktop or an explicitly authorized Git commit/push, then review the actual remote result.
 7. Update pending CI evidence after the relevant workflow actually passes.
 
 ## Development updates versus game releases
@@ -43,3 +43,7 @@ an unrelated development update.
 - [M1 C gameplay integration — October 27, 2026](updates/2026-10-27-m1-core.md)
 - [M1 setup/API](3d/CORE-INTEGRATION.md)
 - [M1 verification](3d/M1-RESULTS.md)
+
+## Current documentation entry points
+
+Maintain docs/README.md, CURRENT-STATUS.md and AI-HANDOFF.md as the current navigation/status/working contract. Put dated detail in updates/ and social drafts in social/. Do not append a competing current status to every historical report. Preserve historical paths. Local private pointers live under ignored .local/; never stage them. Screenshot figures must retain provenance and explicit comparison limits.

@@ -1,3 +1,5 @@
+> Historical milestone document. For current scope and working instructions, read [current status](../CURRENT-STATUS.md), [AI handoff](../AI-HANDOFF.md) and the [3D document map](README.md). Earlier priorities do not override current macOS-first production.
+
 # First implementation backlog
 
 Status: M0 partially implemented. See [M0 results](M0-RESULTS.md) for verified work and [setup instructions](GETTING-STARTED.md) to run the laboratory. Remaining milestones are proposed work.

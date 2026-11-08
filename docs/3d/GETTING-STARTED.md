@@ -1,3 +1,5 @@
+> Historical milestone document. For current scope and working instructions, read [current status](../CURRENT-STATUS.md), [AI handoff](../AI-HANDOFF.md) and the [3D document map](README.md). Earlier priorities do not override current macOS-first production.
+
 # Run the M0 3D laboratory
 
 For the optional live C integration, see [CORE-INTEGRATION.md](CORE-INTEGRATION.md). The no-ROM M0 mode described here remains available.

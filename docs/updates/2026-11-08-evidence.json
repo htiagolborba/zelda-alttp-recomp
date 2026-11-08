@@ -1,0 +1,62 @@
+{
+  "documentation_date": "2026-11-08",
+  "implementation_evidence_date": "2026-11-03",
+  "scope": "Sanitized summary of existing private receipts; not a fresh test run or whole-game acceptance. No private absolute paths or input data included.",
+  "checks": [
+    {
+      "check": "full_exterior",
+      "evidence_id": "studio-exterior-84/world-terrain-rebaseline-01/BATCH-AUDIT.json",
+      "result": "ART_RENDER_COMPLETE",
+      "sha256": "71e5091aad68b607837712c3156d2fab1107323742beb5fffb52d48cd761a194",
+      "resource_images": 82,
+      "logged_issue_count": 0
+    },
+    {
+      "check": "latest_landscape",
+      "evidence_id": "studio-exterior-85/landscape-kit-03/BATCH-AUDIT.json",
+      "result": "ART_RENDER_COMPLETE",
+      "sha256": "38a2bd342240edd4905702828e643a9b853962d86641a265734028d4e07d4700",
+      "resource_images": 11,
+      "logged_issue_count": 0
+    },
+    {
+      "check": "browser_render",
+      "evidence_id": "studio-exterior-85/browser-preview-01/CHECK.json",
+      "result": "BROWSER_RENDER_CHECKED",
+      "sha256": "d50249efa602b9093635b273ed338d9db123808f4d03adacc07355689217b871",
+      "logged_issue_count": 0
+    },
+    {
+      "check": "plan_view",
+      "evidence_id": "studio-exterior-85/house-plan-comparison-01/CHECK.json",
+      "result": "ART_PLAN_CAPTURE_CHECKED",
+      "sha256": "ea0ab2bef602c00f239421b388d16d6b68ba08dbc3c3e66106a1a09a653864ce",
+      "logged_issue_count": 0
+    },
+    {
+      "check": "native_source_equality",
+      "evidence_id": "studio-exterior-85/NATIVE-UNCHANGED.json",
+      "result": true,
+      "sha256": "62edf491a1a193efc6cb9b1a2006b4d70bfa35406425ebf748477a617738bf4e"
+    },
+    {
+      "check": "source_bg2_reference",
+      "evidence_id": "production-overworld-art/house-02/REPORT.json",
+      "result": "PASS_READONLY_SOURCE_REFERENCE",
+      "sha256": "45358f25930abfa7d3a5f94fb05d2863679915985619c857eb3db166a86643b2",
+      "tick": 6450,
+      "area": 44,
+      "protected_inputs_unchanged": true,
+      "snapshot_matches_existing_golden": true
+    }
+  ],
+  "known_limits": [
+    "Full exterior atlas84 differs from latest affected landscape85; indoor retained baseline82 is separate.",
+    "Failed landscape-kit-02 remains rejected despite emitted PNGs; fresh-room-width repair verified in03.",
+    "Browser check is actual rendering, not manual control verification.",
+    "Authored low banks are not native physical elevations.",
+    "Deferred native room exporter and C6 attribute research are not production data.",
+    "No new binary release, Windows build or controller verification."
+  ],
+  "image_manifest": "../images/2026-11-08/manifest.json"
+}

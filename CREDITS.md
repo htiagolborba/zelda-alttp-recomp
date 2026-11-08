@@ -1,39 +1,24 @@
-# Créditos do projeto macOS e Windows
+# Credits and contribution scope
 
-**Responsável pelo projeto:** Hiran Tiago Lins Borba
-**GitHub:** https://github.com/htiagolborba
-**Localização:** Toronto, ON, CA
+**Project lead:** Hiran Tiago Lins Borba
 
-## Trabalho deste projeto
+**Location:** Toronto, ON, CA
 
-Projeto pessoal de Hiran Tiago Lins Borba, desenvolvido com assistência de IA (Codex).
-Seu escopo inclui a preparação do ambiente e do build nativo para macOS e Windows,
-extração local dos recursos da ROM, script de compilação, empacotamento do
-aplicativo, ferramentas de release, integração do ícone da Triforce e documentação técnica.
-A direção proposta para a evolução gráfica é um visual de diorama; essa
-reformulação visual ainda não foi implementada.
+**Profile:** https://github.com/htiagolborba
 
-Copyright (c) 2026 Hiran Tiago Lins Borba, para as contribuições originais deste projeto.
+## This project
 
-## Base e componentes de terceiros
+Hiran leads this personal desktop adaptation and experimental 3D presentation project. His work includes platform builds/packaging, release tooling, application-icon integration, source/presentation experiments, reusable visual-production tools and documentation, developed with AI assistance. Current private 3D progress is documented separately from the public stable 2D release.
 
-- Reimplementação C: snesrev/zelda3 — https://github.com/snesrev/zelda3.
-- Créditos upstream: snesrev e elzo_d; licença MIT e avisos em
-  `zelda3/LICENSE.txt` (ou `LICENSE.txt` nos recursos do aplicativo).
-- SDL2: https://www.libsdl.org/ — licença zlib, incluída em
-  `zelda3/third_party/SDL2-LICENSE.txt` e nos recursos do aplicativo.
-- Opus e demais componentes conservam seus avisos e licenças originais.
-- The Legend of Zelda: A Link to the Past e os recursos originais do jogo
-  são da Nintendo. O ícone foi convertido do arquivo Triforce incluído no
-  projeto upstream.
+Copyright (c) 2026 Hiran Tiago Lins Borba for his original contributions, subject to the applicable repository and third-party licenses. Project leadership does not imply ownership of upstream code or Nintendo resources.
 
-Os créditos de Hiran Tiago Lins Borba se referem às contribuições desta adaptação e à
-condução do projeto, preservando a autoria do jogo e dos componentes usados.
+## Upstream and third-party work
 
-## Experimental 3D laboratory (M0)
+- Reverse-engineered C reimplementation: [snesrev/zelda3](https://github.com/snesrev/zelda3), including upstream contributors snesrev and elzo_d. Preserve the MIT license/notices in zelda3/LICENSE.txt.
+- SDL2: [libsdl.org](https://www.libsdl.org/), zlib license; notices retained in zelda3/third_party/SDL2-LICENSE.txt and packaged resources where applicable.
+- Opus and other bundled components retain their original copyright and license notices.
+- Godot Engine uses the MIT license; the generated native interface header retains its original copyright/license notice. Blender and other tools retain their respective project ownership/licenses.
+- The Triforce application icon was converted from the upstream project image. Its inclusion does not imply ownership of Nintendo artwork.
+- The Legend of Zelda, A Link to the Past, Link's Awakening, original game graphics and related marks belong to Nintendo. This is an unofficial fan/research project, not endorsed by Nintendo.
 
-Original procedural scene, native lifecycle probe and related tooling: Hiran Tiago Lins Borba, developed with OpenAI Codex assistance. Godot Engine is used under the MIT license; the generated native interface header retains its original copyright and license notice. No ALttP gameplay or Nintendo Switch models are integrated into this probe.
-
-## Experimental C gameplay integration (M1)
-
-Host separation, Godot binding, state/input interfaces, diagnostic presentation and verification tooling: Hiran Tiago Lins Borba, with OpenAI Codex assistance. Gameplay code remains the snesrev/zelda3 reimplementation; no authorship of the original Nintendo game or upstream reverse engineering is claimed.
+Public packages and this documentation commit do not distribute ROMs, keys, extracted game data, private converted models or textures. Screenshots document the work in progress; they do not constitute an asset pack or a complete 3D remake release.

@@ -1,3 +1,5 @@
+> Historical milestone document. For current scope and working instructions, read [current status](../CURRENT-STATUS.md), [AI handoff](../AI-HANDOFF.md) and the [3D document map](README.md). Earlier priorities do not override current macOS-first production.
+
 # 3D presentation blueprint
 
 **Project:** Zelda ALttP — macOS & Windows

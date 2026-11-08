@@ -11,21 +11,21 @@ This project builds on [snesrev/zelda3](https://github.com/snesrev/zelda3), a re
 
 The current version retains the original 2D presentation. A miniature diorama presentation is under development in a **private Godot prototype**. Selected indoor/outdoor routes have reached bounded local milestones; no 3D remake or HD texture overhaul is included in the stable release.
 
-## Latest development update — November 2, 2026
+## Latest development update — November 8, 2026
 
-I am expanding the private macOS prototype from selected playable scenes into a reusable, source-driven visual production pipeline. The latest work adds indoor base layouts, stone and wood materials, water/pit trim, door archetypes, regional architecture and static enemy art previews.
+I am refining my private macOS prototype into a reusable visual-production pipeline: source-aligned house architecture, earth paths, water/shoreline treatment, varied canopies and an interactive region browser. I also consolidated the project history and a portable Claude/AI handoff.
 
-![Original castle gate source detail beside the current Godot art preview](docs/images/2026-11-02/castle-comparison.png)
+![Earlier house exterior beside the current Godot presentation](docs/images/2026-11-08/exterior-evolution.png)
 
-*Original source BG2 detail (left), current offline Godot art (right). Different framing; this is a visual preview, not a matched gameplay capture or a completed castle.*
+*Real captures of the same source area with different cameras. The current art restores the missing house and improves shared materials; native elevation and broader gameplay integration remain incomplete.*
 
-![Six exterior environments rendered in the private Godot art studio](docs/images/2026-11-02/exterior-gallery.png)
+![Village and grove, desert and forest previews shown side by side](docs/images/2026-11-08/environment-gallery.png)
 
-*Actual art renders: sanctuary, eastern ruins, desert architecture, dark tower, ice entrance and castle gate. Architecture and gameplay integration remain incomplete.*
+*Actual offline art renders. First-pass scenery, not completed maps or matched gameplay captures.*
 
-**[Full visual progress report and comparison gallery](docs/updates/2026-11-02-visual-production.md)** · **[Detailed changelog](CHANGELOG.md)** · [Previous gameplay checkpoint](docs/updates/2026-11-01-native-3d-progress.md)
+**[Latest report and original/3D comparisons](docs/updates/2026-11-08-landscape-and-handoff.md)** · **[Detailed changelog](CHANGELOG.md)** · [Documentation map](docs/README.md) · [Claude/AI handoff](docs/AI-HANDOFF.md)
 
-The public stable packages retain the original **2D presentation**. This update publishes documentation and screenshots of private research; it does not contain the private 3D implementation or converted resources. Active 3D development targets **macOS only**.
+The public stable packages retain the original **2D presentation**. This update publishes documentation and composed screenshots of private research, not the latest private implementation/resources or a new 3D release. Active 3D development targets **macOS only**.
 
 ## Project status
 
@@ -211,7 +211,7 @@ The current production order is:
 
 Art generation and gameplay acceptance are tracked separately. A rendered resource can include unused or shared layouts; its presence in an atlas does not mean a completed playable room. Private models and textures are not included in this repository.
 
-Development history: [November 2 visual production](docs/updates/2026-11-02-visual-production.md), [November 1 gameplay](docs/updates/2026-11-01-native-3d-progress.md), [October 28 opening room](docs/updates/2026-10-28-styled-room.md), [M1 C bridge](docs/updates/2026-10-27-m1-core.md), [M0 laboratory](docs/updates/2026-10-27-m0.md). Early blueprint/setup documents describe their original milestones and may differ from the current private production workflow. See [how updates are maintained](docs/UPDATING-GITHUB.md).
+Development history: [November 8 landscape/handoff](docs/updates/2026-11-08-landscape-and-handoff.md), [November 2 visual production](docs/updates/2026-11-02-visual-production.md), [November 1 gameplay](docs/updates/2026-11-01-native-3d-progress.md), [October 28 opening room](docs/updates/2026-10-28-styled-room.md), [M1 C bridge](docs/updates/2026-10-27-m1-core.md), [M0 laboratory](docs/updates/2026-10-27-m0.md). Early blueprint/setup documents describe their original milestones and may differ from the current private production workflow. See [how updates are maintained](docs/UPDATING-GITHUB.md).
 
 ## Credits and licensing
 

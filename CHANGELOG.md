@@ -7,6 +7,22 @@ milestone is not automatically a new downloadable game release.
 
 ## Unreleased — experimental 3D laboratory
 
+### 2026-11-08 — landscape presentation and portable development handoff
+
+Documentation/screenshots milestone covering private work through candidate 85. Public stable binaries and early 3D scaffolding are unchanged; no new release or Windows build.
+
+- Expanded private source/prop/actor art through82:22,412 descriptors including repeated defaults,174/328 partial source-family adapters, 1,470 pending entries, two ceiling omissions;863 static indoor placements in 175 records and 291 exterior first-part previews. Inventory is not completed gameplay.
+- Restored missing source-aligned houses via explicit numeric door-predicate comparison; added shared facade/foundation/trim/roof details.
+- Added source-mask earth paths and water/ripple/shoreline surfaces, authored offline low-bank volumes and deterministic canopy variation with preserved root anchors.
+- Added interactive art-region navigation, Focus and Overview. Actual UI rendering checked; manual controls not fully exercised.
+- Recorded82 clean fresh exterior resource renders in84 and eleven clean affected landscape renders in85. Preserved failed batch02 and its fresh-room-width repair; no new native gameplay acceptance inferred.
+- Added full-area original BG2/3D plan comparison and four labeled real-capture boards with hashed provenance. Different framing/state and stand-in scenery are disclosed.
+- Reorganized documentation navigation, current status, public/private architecture and Claude/AI entry points. Local private routing is ignored by Git; historical links preserved. Project overview and credits updated in English.
+- Prepared an English LinkedIn draft with image order/alt text. Nothing posted automatically.
+- Next: source-specific terrain/elevation, coherent region silhouettes, layers/overlays and architecture/special-area refinement; broader native-state integration follows the visual gates. No reliable game-wide percentage.
+
+[Detailed report and comparisons](docs/updates/2026-11-08-landscape-and-handoff.md) · [Current status](docs/CURRENT-STATUS.md).
+
 ### 2026-11-02 — source-driven visual production milestone
 
 This entry summarizes private implementation since the previous published checkpoint. The public commit contains documentation and screenshots only; stable binaries and public prototype code are unchanged.

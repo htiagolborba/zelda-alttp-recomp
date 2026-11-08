@@ -1,0 +1,192 @@
+{
+  "documentation_date": "2026-11-08",
+  "implementation_checkpoint": "85; earlier evidence dates retained",
+  "scope": "Real captures composed into labeled documentation figures. No AI-generated game imagery, retouching, private assets or absolute private paths included.",
+  "images": [
+    {
+      "file": "docs/images/2026-11-08/original-vs-3d.png",
+      "dimensions": [
+        1920,
+        922
+      ],
+      "sha256": "bdf84f9935934caeae38fb42721b5120f7edaaec2263713b9bb7e45b6209ce30",
+      "sources": [
+        {
+          "label": "Original SNES source BG2 | full resource",
+          "source_set": "production-overworld-art/house-02/source-bg2.png",
+          "sha256": "0a1bc236be0589d7b0f7ef38a82c663798021cae16da5b3628441270037b46ca",
+          "original_dimensions": [
+            512,
+            512
+          ],
+          "crop": null,
+          "resampling": "nearest"
+        },
+        {
+          "label": "My Godot art presentation | checkpoint 85",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-044.png",
+          "sha256": "292302544359fa6ca79bf3d16a510f4045323b54dc9cd50b0d74b7ab87993adb",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        }
+      ]
+    },
+    {
+      "file": "docs/images/2026-11-08/exterior-evolution.png",
+      "dimensions": [
+        1920,
+        922
+      ],
+      "sha256": "9c39a4f596299cf3aad62cc592f01575229d0a336d47648d9058cb6e5e2e9dcb",
+      "sources": [
+        {
+          "label": "Earlier art capture | November 2 baseline",
+          "source_set": "public-update-2026-11-02/exterior-corrected/area-044.png",
+          "sha256": "5fc86f43ef586cc6de8c22d3bfa3fa9ea757f407b9877ca7caaa218dc58e749e",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": null,
+          "resampling": "lanczos"
+        },
+        {
+          "label": "Current art capture | checkpoint 85",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-044.png",
+          "sha256": "292302544359fa6ca79bf3d16a510f4045323b54dc9cd50b0d74b7ab87993adb",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        }
+      ]
+    },
+    {
+      "file": "docs/images/2026-11-08/environment-gallery.png",
+      "dimensions": [
+        1920,
+        1512
+      ],
+      "sha256": "043d1057e5c8f88f15b4f3e41a9366e04c589e3656c2a98c4bfb457ff13e47f0",
+      "sources": [
+        {
+          "label": "Kakariko NW | source resource 024",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-024.png",
+          "sha256": "2079beb7ed8a4fc7eddf3a45ed011af10c182be611266c60e888388cd8634641",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        },
+        {
+          "label": "Special grove preview | source resource 128",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-128.png",
+          "sha256": "ac002bd97797b8e8d86d504fbe538ff931b3231f1be6d05c201727f8a047c139",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        },
+        {
+          "label": "Desert of Mystery NW | resource 048",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-048.png",
+          "sha256": "3d274bdf7df553ca84908e044444d176ced23fb06ff651f3b0bff6d060a4e6b2",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        },
+        {
+          "label": "Lost Woods NW | source resource 000",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/landscape-kit-03/area-000.png",
+          "sha256": "233ee2049179488e20d8a20d1fa380ae04dc8e2bc03475b96285b0b73712e9fb",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            0,
+            0,
+            1440,
+            700
+          ],
+          "resampling": "lanczos"
+        }
+      ]
+    },
+    {
+      "file": "docs/images/2026-11-08/source-layout-comparison.png",
+      "dimensions": [
+        1920,
+        922
+      ],
+      "sha256": "97cb9661398fb1543000ebd693ed92b7ef7533efb825af75749fff07256c9059",
+      "sources": [
+        {
+          "label": "Original source BG2 | nearest-neighbor",
+          "source_set": "production-overworld-art/house-02/source-bg2.png",
+          "sha256": "0a1bc236be0589d7b0f7ef38a82c663798021cae16da5b3628441270037b46ca",
+          "original_dimensions": [
+            512,
+            512
+          ],
+          "crop": null,
+          "resampling": "nearest"
+        },
+        {
+          "label": "Godot plan view | actual renderer capture",
+          "source_set": "outdoor-map-execution/OWM-02/studio-exterior-85/house-plan-comparison-01/area-044.png",
+          "sha256": "907b9e0de0bda1852a6a131ccb9725f19a92022aeb1b7b29945051ef01f05295",
+          "original_dimensions": [
+            1440,
+            810
+          ],
+          "crop": [
+            331,
+            16,
+            1109,
+            794
+          ],
+          "resampling": "lanczos"
+        }
+      ]
+    }
+  ]
+}
